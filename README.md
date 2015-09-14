@@ -18,21 +18,21 @@ Requirements include :
 
 Criteria for testing are :
 
->>Testing basic ops
+_Testing basic ops_
 This phase will test basic operations, i.e., insert, query, delete, @, and *. This will test if everything is correctly replicated. There is no concurrency in operations and there is no failure either.
->>Testing concurrent ops with different keys
+_Testing concurrent ops with different keys_
 This phase will test if your implementation can handle concurrent operations under no failure.
 The tester will use independent (key, value) pairs inserted/queried concurrently on all the nodes.
->>Testing concurrent ops with same keys
+_Testing concurrent ops with same keys_
 This phase will test if your implementation can handle concurrent operations with same keys under no failure.
 The tester will use the same set of (key, value) pairs inserted/queried concurrently on all the nodes.
->>Testing one failure
+_Testing one failure_
 This phase will test one failure with every operation.
 One node will crash before operations start. After all the operations are done, the node will recover.
 This will be repeated for each and every operation.
->>Testing concurrent operations with one failure
+_Testing concurrent operations with one failure_
 This phase will execute operations concurrently and crash one node in the middle of the execution. After some time, the failed node will also recover in the middle of the execution.
->>Testing concurrent operations with one consistent failure
+_Testing concurrent operations with one consistent failure_
 This phase will crash one node at a time consistently, i.e., one node will crash then recover, and another node will crash and recover, etc.
 There will be a brief period of time in between the crash-recover sequence.
 
