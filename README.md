@@ -4,19 +4,19 @@ Implementation of a Dynamo-style key-value storage
 
 This is the working code of an Android app for CSE586-Distributed Systems course offered in spring 2015 at UB.
 
-Requirements include :
+**Requirements include :**
 
--Support for insert/query/delete operations.
+-Support for insert/query/delete operations. 
 -There are always 5 nodes in the system. There is no need to implement adding/removing nodes from the system.However, there can be at most 1 node failure at any given time. 
--All failures are temporary; you can assume that a failed node will recover soon, i.e., it will not be permanently   unavailable during a run.
--When a node recovers, it should copy all the object writes it missed during the failure. This can be done by asking the right nodes and copy from them.
--Content provider should support concurrent read/write operations.
--Content provider should handle a failure happening at the same time with read/write operations.
--Replication should be done exactly the same way as Dynamo does. In other words, a (key, value) pair should be replicated over three consecutive partitions, starting from the partition that the key belongs to.
+-All failures are temporary; you can assume that a failed node will recover soon, i.e., it will not be permanently   unavailable during a run. 
+-When a node recovers, it should copy all the object writes it missed during the failure. This can be done by asking the right nodes and copy from them. 
+-Content provider should support concurrent read/write operations. 
+-Content provider should handle a failure happening at the same time with read/write operations. 
+-Replication should be done exactly the same way as Dynamo does. In other words, a (key, value) pair should be replicated over three consecutive partitions, starting from the partition that the key belongs to. 
 -All replicas should store the same value for each key. This is “per-key” consistency. There is no consistency guarantee you need to provide across keys. More formally, you need to implement per-key linearizability.
 
 
-Criteria for testing are :
+**Criteria for testing are :**
 
 _*Testing basic ops*_
 
